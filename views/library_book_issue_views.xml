@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <record id="library_book_issue_list_view" model="ir.ui.view">
+        <field name="name">library.book.issue.list.view</field>
+        <field name="model">library.book.issue</field>
+        <field name="arch" type="xml">
+            <list string="Library Book Issue">
+                <field name="book_id"/>
+                <field name="member_id"/>
+                <field name="issue_date"/>
+                <field name="return_date"/>
+                <field name="status"/>
+                <field name="days_issued"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="library_book_issue_form_view" model="ir.ui.view">
+        <field name="name">library.book.issue.form.view</field>
+        <field name="model">library.book.issue</field>
+        <field name="arch" type="xml">
+            <form string="Library Book Issue">
+                <sheet>
+                    <group string="Library Book Issue Details">
+                        <field name="book_id"/>
+                        <field name="member_id"/>
+                        <field name="issue_date"/>
+                        <field name="return_date"/>
+                        <field name="status"/>
+                        <field name="days_issued"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="library_book_issue_action" model="ir.actions.act_window">
+        <field name="name">Library Book Issue</field>
+        <field name="res_model">library.book.issue</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>
